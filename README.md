@@ -1,8 +1,6 @@
 # SPRK Frontend Coding Challenge
 
-### INFO
-
-# All TODO comment couldn't be achieved because lack of time dedicated to the task
+#### All TODO comment couldn't be achieved because lack of time dedicated to the task
 
 ## Main technologies used
 
@@ -23,7 +21,7 @@
 
 - yarn install
 - yarn dev
-- yarn json-server --watch db.json --port 3001 to lunch the json-server
+- json-server --watch db.json --port 3001 //to lanch the Mock json-server
 
 # Docker solution // frontend well build but json-server creating problem
 
