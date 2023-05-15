@@ -1,0 +1,22 @@
+version: "0.1"
+services:
+  web:
+    build:
+      context: ./
+      target: runner
+    volumes:
+      - .:/app
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+  json-server:
+    build: .
+    command: npm run server
+    volumes:
+      - .:/app
+    ports:
+      - 3001:3001
+    environment:
+      NODE_ENV: development
