@@ -1,11 +1,13 @@
 import React from "react";
+import type {PropsWithChildren} from 'react';
+
 import styles from "../styles/Field.module.css";
-interface FieldProps {
+import { FieldError } from "react-hook-form";
+type FieldProps = PropsWithChildren<{
   label: string;
-  children?: any;
   htmlFor: string;
-  error: any;
-}
+  error: FieldError | undefined;
+}>;
 export const Field = ({ label, children, htmlFor, error }: FieldProps) => {
   const id = htmlFor || getChildId(children);
   return (

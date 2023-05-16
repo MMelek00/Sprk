@@ -7,7 +7,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 export const getProduct = async (id: string) => {
   const res = await fetch(`http://localhost:3001/products?id=${id}`);
   const products: Product[] = await res.json();
-console.log(res)
   //format the returned product and returns empty object + unavailable message if no product was found
   return products[0]
     ? { message: ServerResponseMessages.SUCCESS, response: products[0] }
